@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="FISUDA" name="cumulative-list" version="0.1.0">
+
+    <details>
+        <title>calc cumulative operator</title>
+        <homepage>https://github.com/lets-fiware/cumulative-list-operator</homepage>
+        <authors>Kazuhito Suda &lt;kazuhito@fisuda.jp&gt;</authors>
+        <email>kazuhito@fisuda.jp</email>
+        <image></image>
+        <smartphoneimage></smartphoneimage>
+        <description>Calcurate cumulative totals</description>
+        <longdescription>DESCRIPTION.md</longdescription>
+        <changelog>doc/changelog.md</changelog>
+        <doc>doc/userguide.md</doc>
+        <license>MIT</license>
+        <issuetracker>https://github.com/lets-fiware/cumulative-list-operator/issues</issuetracker>
+    </details>
+
+    <requirements>
+        <!-- Add any extra requirements here -->
+        <!-- <feature name="${feature-name}" /> -->
+    </requirements>
+
+    <preferences>
+        <preference name="send_nulls" type="boolean" label="Send Nulls" description="Enable this option to propagate null values, leave it disable to filter null events" default="true" />
+    </preferences>
+
+    <wiring>
+        <inputendpoint name="indata" label="In" type="text" friendcode="entity-list poi-list list" />
+        <outputendpoint name="outdata" label="Out" type="text" friendcode="list" />
+    </wiring>
+
+    <scripts>
+        <script src="js/main.js"/>
+    </scripts>
+
+</operator>
