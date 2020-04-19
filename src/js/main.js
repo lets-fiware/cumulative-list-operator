@@ -1,5 +1,5 @@
 /*
- * calc-cumulative
+ * Cumulative list operator
  * https://github.com/lets-fiware/cumulative-list-operator
  *
  * Copyright (c) 2020 Kazuhito Suda
@@ -26,12 +26,18 @@
         return data;
     };
 
+    var pushEvent = function pushEvent(data) {
+        if (MashupPlatform.operator.outputs.outdata.connected) {
+            MashupPlatform.wiring.pushEvent("outdata", data);
+        }
+    }
+
     var valueList = function valueList(indata) {
         indata = parseInputEndpointData(indata);
 
         var send_nulls = MashupPlatform.prefs.get("send_nulls");
         if (indata == null && send_nulls) {
-            return MashupPlatform.wiring.pushEvent('outdata', null);
+            return pushEvent(null);
         } else if (indata == null) {
             return; // do nothing
         }
@@ -44,7 +50,7 @@
             sum += data;
             return sum;
         });
-        MashupPlatform.wiring.pushEvent("outdata", outdata);
+        pushEvent(outdata);
     };
 
     /* TODO

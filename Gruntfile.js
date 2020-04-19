@@ -1,5 +1,5 @@
 /*
- * cumulative-list-operator
+ * Cumulative list operator
  * https://github.com/lets-fiware/cumulative-list-operator
  *
  * Copyright (c) 2020 Kazuhito Suda
@@ -119,9 +119,6 @@ module.exports = function (grunt) {
                     'node_modules/mock-applicationmashup/dist/MockMP.js',
                     'src/js/*.js',
                     'tests/js/*Spec.js'
-                ],
-                exclude: [
-                    'src/js/main.js',
                 ],
                 frameworks: ['jasmine'],
                 reporters: ['progress', 'coverage'],

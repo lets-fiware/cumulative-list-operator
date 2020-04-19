@@ -1,6 +1,11 @@
-# calc cumulative operator operator
+[![](https://nexus.lab.fiware.org/repository/raw/public/badges/chapters/visualization.svg)](https://www.fiware.org/developers/catalogue/)
+[![License: MIT](https://img.shields.io/github/license/lets-fiware/cumulative-list-operator.svg)](https://opensource.org/licenses/MIT)<br/>
+[![Build Status](https://travis-ci.org/lets-fiware/cumulative-list-operator.svg?branch=master)](https://travis-ci.org/lets-fiware/cumulative-list-operator)
+[![Coverage Status](https://coveralls.io/repos/github/lets-fiware/cumulative-list-operator/badge.svg)](https://coveralls.io/github/lets-fiware/cumulative-list-operator)
 
-The calc cumulative operator operator is a WireCloud operator that provides ...
+# Cumulative list operator
+
+The cumulative list operator is a WireCloud operator that allows you to create list of cumulative values.
 
 ## Build dependencies
 
