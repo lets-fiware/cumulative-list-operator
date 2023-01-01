@@ -2,7 +2,7 @@
  * Cumulative list operator
  * https://github.com/lets-fiware/cumulative-list-operator
  *
- * Copyright (c) 2020 Kazuhito Suda
+ * Copyright (c) 2020-2023 Kazuhito Suda
  * Licensed under the MIT license.
  */
 
